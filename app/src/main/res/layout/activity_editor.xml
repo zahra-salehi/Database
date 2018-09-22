@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <!-- Label -->
+    <TextView
+        android:id="@+id/category_overview"
+        style="@style/CategoryStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/category_overview"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Name field -->
+    <EditText
+        android:id="@+id/edit_pet_name"
+        style="@style/EditorFieldStyle"
+        android:layout_width="250dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_pet_name"
+        android:inputType="textCapWords"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintLeft_toRightOf="@+id/category_overview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Breed field -->
+    <EditText
+        android:id="@+id/edit_pet_breed"
+        style="@style/EditorFieldStyle"
+        android:layout_width="250dp"
+        android:hint="@string/hint_pet_breed"
+        android:inputType="textCapWords"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintLeft_toRightOf="@+id/category_overview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pet_name" />
+
+    <!-- Label -->
+    <TextView
+        android:id="@+id/category_gender"
+        style="@style/CategoryStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/category_gender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_overview" />
+
+    <!-- Gender drop-down spinner -->
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingRight="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toRightOf="@+id/category_gender"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pet_breed" />
+
+    <!-- Label -->
+    <TextView
+        android:id="@+id/CategoryStyle"
+        style="@style/CategoryStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/category_measurement"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_gender" />
+
+    <!-- Weight field -->
+    <EditText
+        android:id="@+id/edit_pet_weight"
+        style="@style/EditorFieldStyle"
+        android:layout_width="250dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_pet_weight"
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@+id/CategoryStyle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_gender" />
+
+    <!-- Units for weight (kg) -->
+    <TextView
+        android:id="@+id/label_weight_units"
+        style="@style/EditorUnitsStyle"
+        android:layout_marginBottom="312dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/unit_pet_weight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_pet_weight"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
